@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO list</title>
+  </head>
+  <body>
+    <a href="../index.html">Go to Dashboard</a>
+    <h1>Todo List 0947</h1>
+
+    <div>
+      <input type="text" class="todo-name" placeholder="Todo Name" />
+      <input type="date" class="todo-date" />
+      <input type="submit" onclick="addNew()" placeholder="Add" />
+    </div>
+    <div class="show-todoList">
+      <!-- <div style="display: flex;">
+        <div></div>
+        <div>12/12/2012</div>
+        <button>Delete</button>
+      </div> -->
+    </div>
+
+    <script>
+      let todoList = JSON.parse(localStorage.getItem("todoList")) || [];
+      const showDiv = document.querySelector(".show-todoList");
+      showToDoList();
+      function addNew() {
+        // Take Reference
+        const todoName = document.querySelector(".todo-name").value;
+        const todoDate = document.querySelector(".todo-date").value;
+        // Add into TodoList
+        todoList.push({
+          name: todoName,
+          date: todoDate,
+        });
+        // Save in localStore
+        localStorage.setItem("todoList", JSON.stringify(todoList));
+        console.log(todoList);
+
+        // Render TODO List
+        showToDoList();
+      }
+
+      function deleteElementInTodo(index){
+        todoList.splice(index,1);
+        localStorage.setItem("todoList", JSON.stringify(todoList));
+        showToDoList();
+      }
+      function showToDoList() {
+        let todoListHTML = `
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Date set</th>
+                    <th></th>
+                </tr>
+        `;
+        for (let i = 0; i < todoList.length; i++) {
+          let todoObject = todoList[i];
+          let { name, date } = todoObject;
+
+          let html = `
+            <tr>
+                <td>${name}</td>
+                <td>${date}</td>
+                <td><button onclick="deleteElementInTodo(${i})">Delete</button></td>
+            </tr>
+          `;
+          todoListHTML += html;
+        }
+        todoListHTML += "</table>";
+        showDiv.innerHTML = todoListHTML;
+      }
+    </script>
+  </body>
+</html>

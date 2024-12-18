@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard 0947</title>
+</head>
+<body>
+    <h1>Run faster as you can - get your goal, dream.</h1>
+
+    <ul>
+        <li>Dream - Work hard + Niềm tin tuyệt đối</li>
+        <p>Độc lập tài chính, thuê được căn phòng ở sạch sẽ đàng hoàng đầy đủ nhu cầu và đẹp </p>
+        <li>Goal</li>
+        <p>JavaScript -> Code All Project in Roadmap.sh with JavaScript -> Code All Project in Roadmap.sh with Java Spring -> Build App Learn English + Make money(... all stuff)</p>
+        <li>Nhớ Nhựt ơi</li>
+        <p>Lớn được rồi</p>
+        <p>Mua xe Lamborghini, BMW, Moto được rồi</p>
+        <p>Xây biệt thự cho cha mẹ, đưa gia đình đi du lịch sang chảnh, ăn nhà hàng, khám phá thế giới được rồi</p>
+        <p>Tập trung đưọc rồi</p>
+        <p>Phải giàu, phải giàu, phải làm phải làm. và LÀM</p>
+        <p>Trách nhiệm lo cho gia đình</p>
+        <p>Giàu mới có sự lựa chọn cuộc sống như thế nào</p>
+        <p>Luôn sung sức, càng bị bầm dập càng mạnh mẽ, càng ý chí</p>
+        <p>Chỉ hướng về mục tiêu, công việc, việc khác không biết gì và tất cả những gì mọi người làm đều không có vấn đề gì.</p>
+    </ul>
+
+    <h1>Plan</h1>
+
+
+    <h1>Current Mission</h1>
+    <p>+1 Billionaire Score when done these things</p>
+    
+    <ul>
+    <li><input type="checkbox" name="" id="" checked> 1 JavaScript Basics</li>
+    <li><input type="checkbox" name="" id="" checked> 2 Numbers and Math</li>
+    <p>Math.round()</p>
+    <p>Caculate money with cent -> revert to dollar ( 2.23 + 4.77) -> ( 233 + 477) -> /100</p>
+    <li><input type="checkbox" name="" id="" checked>20 minutes - 3 Strings</li>
+    <p>String + number -> String ( String follow order of operation )</p>
+    <p>Use '\' if you want to type single quotes or double quotes in your string</p>
+    <p>Use '\n' to create a new line</p>
+    <ul>
+        <li>Concatenateion : 'Items (' + (1 + 1) + '): $' + (2095 + 799) /100</li>
+        <li>Interpolation:   `Items (${1 + 1}): $${(2095 + 799) / 100 }`</li>
+        <p>Multi-line string feature: Type in console `some and enter add into below is text`, it's will create string like 'some\ntext'</p>
+    </ul>
+    <li><input type="checkbox" name="" id="" checked>3 minutes - 4 HTML CSS Review, console.log</li>
+    <li><input type="checkbox" name="" id="" checked>11 minutes - 5 Variables</li>
+    <p>Var let const</p>
+    <li><input type="checkbox" name="" id="" checked> 6 Booleans and If-Statements</li>
+    <p>typeof true or false ( Boolean )</p>
+    <p>console.log(3>4) - Comparison Operator</p>
+    <h2>Truthy and Falsy value</h2>
+    <p>false 0 '' NaN undefined null is FALSY VALUES</p>
+    <small>Undefined is variable doesn't have VALUE</small>
+
+    <h2>Shortcuts for If-Statements</h2>
+    <p>Ternary Operator ? : " true ? 'truthy' : 'falsy'  or "const result = 0 ? 'truthy' : 'falsy'"</p>
+    <h3>Guard Operator &&</h3>
+    <p>false && console.log('hello')</p>
+    <p>const message = 5 && 'hello';</p>
+    <h3>Default Operator ||</h3>
+    <p>const currency = 'VND' || 'USD'; console.log(currency)</p>
+    <p>const currency = undefined || 'USD'; console.log(currency)</p>
+
+
+    <li><input type="checkbox" name="" id="" checked> 7 Functions</li>
+    <li><input type="checkbox" name="" id="" checked> 8 Objects</li>
+    <h3>Call attribute</h3>
+    <p>Default is console.log(product2.name) or inside bracket notation like CONSOLE.LOG(PRODUCT2['DELIVERY-TIME']);</p>
+    <p>Can write function inside object</p>
+    fun: function function1(){
+
+    }
+    <h3>JSON</h3>
+    <p>console.log(JSON.stringify(product2)); -> Convert obj to JSON type</p>
+    <p>const jsonString = JSON.stringify(product2);</p>
+    <p>console.log(JSON.parse(jsonString)); -> Convert Json to JavaScript type</p>
+    <h3>LocalStore</h3>
+    <p>Only support String</p>
+    <p>localStorege.setItem('message', 'hello'); -> Save data in LocalStorage</p>
+    <p>localStorage.getItem('message'); -> Get data from LocalStorage</p>
+    <p>Save object - use JSON.stringify() to convert obj to String : localStorage.setItem('score', JSON.stringify(score));</p>
+    <p>Remove item : localStorage.removeItem('score');</p>
+    <small>If remove item in LocalStore need have this things</small>
+    <p>if (score === null) {} OR if(!score){} -> set default value</p>
+    <h4>The greated way</h4>
+    <p>let score = JSON.parse(localStorage.getItem('score')) || {}; -> The left side is Truly, use LEFT SIDE, if left side is Falsy, use RIGHT SIDE as a default value</p>
+    <h3>Copy by Reference</h3>
+    <small>Object 1 have a some space in computer memory, and object 2 is reference to object1, althougth set obiect with CONST, it's just referent, so we can change value inside obj</small>
+    <p>const object1 = { message: 'hello'}; </p>
+    <p>const object2 = object1;</p>
+    <h3>Destructuring</h3>
+    <p>we have obj with 2 properties " message: 'Good job', price: 899" and we create variable can get that value inside obj by this way</p>
+    <p>Make attention Destructuring is CREATE NEW VARIABLES MESSAGE AND COST that copies of the value from object1</p>
+    <p>const message = object.message</p>
+    <p>Pro way: const {message, price } = object</p>
+    <h3>Shorthand Property</h3>
+    <li><input type="checkbox" name="" id="" checked> 9 Document Object Model (DOM)</li>
+    <p>DOM combines JS and HTML together, it gives DOM full control of the webpage</p>
+    <p>document.title = 'changed';</p>
+    <p>document.querySelector('button').innerHTML -> Get value of all button</p>
+    <p>document.querySelector('button').innerHTML = "changed" -> Change value of button</p>
+    <p>document.querySelector('.js-button') -> Get all element have Class name "js-button"</p>
+    <p>document.querySelector('')</p>
+    <h3>Event</h3>
+    <p>clicks, keydowns => Events</p>
+    <p>onclick, onkeydown, onscroll, onmouseenter, onmouseleave... => event listeners</p>
+    <h3>Attention</h3>
+    <p>A string ONLY contains a NUMBER and we -*/ => it will converted into a number.</p>
+    <p>EXAMPLE : console.log('25' + 5 ) => RESULT is 255</p>
+    <li><input type="checkbox" name="" id="" checked> 10 HTML, CSS, and JavaScript Together</li>
+    <li><input type="checkbox" name="" id="" checked> 11 Arrays and Loops</li>
+    <p>This can be array : [1, 'hello', true, {name: 'socks'}, [1,2]</p>
+    <p>Check if that is Array: Array.isArray("put obj you think is array in here")</p>
+    <p>myArray.push(100) : Adding new value, Add to the end of Array</p>
+    <p>myArray.splice(0,2) : Delete value in [index, number value want to delete from 'index']</p>
+    
+    <li><input type="checkbox" name="" id="" checked> 11 (Part 2) Arrays and Loops</li>
+    <li><input type="checkbox" name="" id=""> 12 Advanced Functions</li>
+    <h3>Anonymous Function</h3>
+    <p>Can create VARIABLE function1 = function gredding(){}</p>
+    <p></p>
+    <p>Function is value in Variables, this time variable have type FUNCTION</p>
+    <h3>Hoisting</h3>
+    <p>That is we declare function but call it before declare it.</p>
+    <p>Hoisting doesn't work if use variable to create function</p>
+    <h3>Passing a function into another function</h3>
+    <p>function run(param){<br>___param();<br>}<br>run(function() {<br>___console.log('hello4');<br>});</p>
+    <h3>Asynchronous code</h3>
+    <p>Code in setTimeout will run line by line after time timeout.</p>
+    <p>setTimeout(function() {<br>___console.log('timeout');<br>console.log('timeout2');<br>}, 3000);</p>
+    <p>setInterval() : it will keep running a function in the future</p>
+    <li><input type="checkbox" name="" id="" checked> 12 (Part 2) Advanced Functions</li>
+    <p>Pass Function INTO Function</p>
+    <p>foreach() in array object and have (value, index) as parameter</p>
+    <p>Arrow Function : const arrowFunction = () => {}</p>
+    <p>Arrow Function : const oneLine = () => 2 + 3;</p>
+    <h3>Event Listenter </h3>
+    <p>document.body.addEventListener('keydown', (even) =>{}) -> use keyboar, event from keyboars</p>
+    <p>Let example we have something <br>const buttonElement = document...<br>const eventListener = () => { console.log('click');};<br>buttonElement.addEventListenter('click', eventListener);<br>buttonElement.removeEventListener('click', eventListener);</p>
+    <h3>filter()</h3>
+    <p>1. Creates a new array[]</p>
+    <p>2. return true, => put value in array</p>
+    <h3>map()</h3>
+    <p>1. Creates a new array[]</p>
+    <p>Whatever we return => Added to new array</p>
+    <p>One line level 1: console.log([1,2,3].map(value => value * 2));</p>
+    
+    <li><input type="checkbox" name="" id=""> 13 Start the Amazon Project and Intro to Git</li>
+    <p>One interest thing is i stuck in import "list products" in file products.js into amazon.js, try with multiple way, don't work, and i look for how he do, he just import products.js into amazon.html, then import amazon.js, he said "it's will run two file one by one, that mean data from products.js can read by amazon.js without declare or anything, just call name of "List products"</p>
+    <p>Next thing is add attribute for element button, like data-product-name, when get from js, it is ProductName</p>
+      
+    <li><input type="checkbox" name="" id=""> 14 Modules</li>
+    <h3>Get Variable out of the file</h3>
+    <p>1.Add type="module" attribute : That mean set type="module" for file js want to access to variable out side<br>2.Export : add export before declare var in file out side like - export const cart = [];<br>3.Import : import {cart as myCart} from '../data/cart.js'</p>
+    <p>To delete product on the screen, use DOM, find id and delete</p>
+    <li><input type="checkbox" name="" id=""> 15 External Libraries</li>
+    <li><input type="checkbox" name="" id=""> 16 Testing</li>
+    <li><input type="checkbox" name="" id=""> 16 Testing Frameworks</li>
+    <li><input type="checkbox" name="" id=""> 17 Object-Oriented Programming</li>
+    <li><input type="checkbox" name="" id=""> Classes</li>
+    <li><input type="checkbox" name="" id=""> Inheritance</li>
+    <li><input type="checkbox" name="" id=""> 18 Intro to Backend, Callbacks, Async Await</li>
+    <li><input type="checkbox" name="" id=""> Promises and fetch</li>
+    <li><input type="checkbox" name="" id=""> Async Await</li>
+    <li><input type="checkbox" name="" id=""> Next steps after this course</li>
+    </ul>
+
+    <h1>Billionaire Score: 0</h1>
+    <small>Task future</small>
+    <ul>
+        <li>Build table database of this, have task, progress to each task</li>
+    </ul>
+
+    <a href="./LearnJavaScript/dashboard-JavaScript.html">Go dashboard</a>
+</body>
+</html>
