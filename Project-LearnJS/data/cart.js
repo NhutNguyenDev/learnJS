@@ -30,3 +30,14 @@ export function updateCartQuanlity(){
         // console.log("Cart quanlity: " + cartQuanlity);
         document.querySelector('.js-cart-quanlity').innerHTML = cartQuanlity;
 }
+
+export function removeItemInCart(productId){
+    const newCart = [];
+    cart.forEach(cartItem => {
+      if(cartItem.productId !== productId){
+        newCart.push(cartItem);
+      }
+    });
+    cart = newCart;
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
