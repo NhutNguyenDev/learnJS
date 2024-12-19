@@ -12,6 +12,7 @@ export function renderPaymentSummary() {
       (productInProducts) => productInProducts.id === idIProductInCart
     );
     priceAllItem += (productMatching.priceCents * product.quanlity) /100 ;
+    product.shippingCost && (priceShipping += product.shippingCost);
   });
 
   const paymentSummaryHTML = `
@@ -19,7 +20,7 @@ export function renderPaymentSummary() {
 
           <div class="payment-summary-row">
             <div>Items (3):</div>
-            <div class="payment-summary-money">$${priceAllItem}</div>
+            <div class="payment-summary-money">$${priceAllItem.toFixed(2)}</div>
           </div>
 
           <div class="payment-summary-row">
@@ -29,7 +30,7 @@ export function renderPaymentSummary() {
 
           <div class="payment-summary-row subtotal-row">
             <div>Total before tax:</div>
-            <div class="payment-summary-money">$${priceAllItem + priceShipping}</div>
+            <div class="payment-summary-money">$${(priceAllItem + priceShipping).toFixed(2)}</div>
           </div>
 
           <div class="payment-summary-row">
@@ -39,7 +40,7 @@ export function renderPaymentSummary() {
 
           <div class="payment-summary-row total-row">
             <div>Order total:</div>
-            <div class="payment-summary-money">$${Math.round((priceAllItem + priceShipping)*0.1) + priceAllItem + priceShipping}</div>
+            <div class="payment-summary-money">$${(Math.round((priceAllItem + priceShipping)*0.1) + priceAllItem + priceShipping).toFixed(2)}</div>
           </div>
 
           <button class="place-order-button button-primary">
